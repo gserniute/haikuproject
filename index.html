@@ -1,38 +1,122 @@
-<html>
-<head>
-  <style>
-    body {
-      background-color: #3498db;
+<style>
+  @font-face {
+    font-family: 'Spaceboy';
+    src: url(SPACEBOY.TTF);
+  }
+
+  body {
+    background-color: #3498db;
+  }
+
+  /* Style for the container */
+  .container {
+    position: relative;
+    /* Position relative to contain the text and square shape */
+    text-align: center;
+    /* Center-align text and box */
+    margin-top: 250px;
+    /* Adjust as needed */
+  }
+
+  /* Style for the square shape */
+  .box {
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+    /* Center the box within the container */
+  }
+
+  /* Style for the text */
+  .text {
+    position: absolute;
+    /* Position the text absolutely */
+    top: 10;
+    /* Place the text at the top of the square shape */
+    left: 1.5%;
+    /* Center the text horizontally */
+    transform: translateX(-50%);
+    /* Offset the translation */
+    font-family: Spaceboy;
+    width: 100%;
+    /* Stretch the text width to match the box */
+    line-height: 1.5;
+    /* Adjust line height as needed */
+    animation: glitch 3s infinite;
+  }
+
+  @keyframes glitch {
+    0% {
+      transform: translateX(0) translateY(0);
+      filter: none;
+      opacity: 1;
     }
-    
-    /* Style for the container */
-    .container {
-      position: relative; /* Position relative to contain the text and square shape */
-      text-align: center; /* Center-align text and box */
-      margin-top: 100px; /* Adjust as needed */
+
+    10% {
+      transform: translateX(-10px) translateY(-5px);
+      filter: hue-rotate(20deg);
+      opacity: 0.8;
     }
-    
-    /* Style for the square shape */
-    .box {
-      background-color: #FFFFFF;
-      width: 200px;
-      height: 200px;
-      margin: 0 auto; /* Center the box within the container */
+
+    20% {
+      transform: translateX(10px) translateY(5px);
+      filter: hue-rotate(-20deg);
+      opacity: 1;
     }
-    
-    /* Style for the text */
-    .text {
-      position: absolute; /* Position the text absolutely */
-      top: 0; /* Place the text at the top of the square shape */
-      left: 50%; /* Center the text horizontally */
-      transform: translateX(-50%); /* Offset the translation */
-      font-family: monospace;
-      width: 100%; /* Stretch the text width to match the box */
-      line-height: 1.5; /* Adjust line height as needed */
+
+    30% {
+      transform: translateX(-5px) translateY(-10px);
+      filter: none;
+      opacity: 0.6;
     }
-  </style>
-</head>
+
+    40% {
+      transform: translateX(0) translateY(5px);
+      filter: none;
+      opacity: 1;
+    }
+
+    /* Repeat similar random transformation steps for the rest of the animation */
+    50% {
+      transform: translateX(-10px) translateY(-5px);
+      filter: hue-rotate(10deg);
+      opacity: 0.8;
+    }
+
+    60% {
+      transform: translateX(10px) translateY(5px);
+      filter: hue-rotate(-10deg);
+      opacity: 1;
+    }
+
+    70% {
+      transform: translateX(-5px) translateY(-10px);
+      filter: none;
+      opacity: 0.6;
+    }
+
+    80% {
+      transform: translateX(0) translateY(5px);
+      filter: none;
+      opacity: 1;
+    }
+
+    90% {
+      transform: translateX(10px) translateY(-5px);
+      filter: hue-rotate(-20deg);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: translateX(0) translateY(0);
+      filter: none;
+      opacity: 1;
+    }
+  }
+</style>
+
 <body>
+
   <div class="container">
     <!-- Text inside the container -->
     <div class="text">
@@ -40,9 +124,16 @@
       <p>Too low, David walks away</p>
       <a href="https://esmee02.github.io/haiku/">Facebook Marketplace</a>
     </div>
-    
+
     <!-- Square shape inside the container -->
     <div class="box"></div>
+
+    <div class="gif-container">
+      <img src="giphy.gif" alt="David walking away" width="400" height="200">
+    </div>
+
   </div>
+
+
+
 </body>
-</html>
