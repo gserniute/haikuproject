@@ -1,19 +1,48 @@
-<style>
-  body {
-    background-color: #3498db;
-  }
-</style> 
-<h1>
- <p>
-   An offer is made
-  </p> 
-  <p>
-    Too low, David walks away
-  </p>
-
-
-  <a href="https://esmee02.github.io/haiku/"> Facebook Marketplace</a>
-
-</h1>
-
-<div class="box"></div>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #3498db;
+    }
+    
+    /* Style for the container */
+    .container {
+      position: relative; /* Position relative to contain the text and square shape */
+      text-align: center; /* Center-align text and box */
+      margin-top: 100px; /* Adjust as needed */
+    }
+    
+    /* Style for the square shape */
+    .box {
+      background-color: #FFFFFF;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto; /* Center the box within the container */
+    }
+    
+    /* Style for the text */
+    .text {
+      position: absolute; /* Position the text absolutely */
+      top: 0; /* Place the text at the top of the square shape */
+      left: 50%; /* Center the text horizontally */
+      transform: translateX(-50%); /* Offset the translation */
+      font-family: monospace;
+      width: 100%; /* Stretch the text width to match the box */
+      line-height: 1.5; /* Adjust line height as needed */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Text inside the container -->
+    <div class="text">
+      <p>An offer is made</p>
+      <p>Too low, David walks away</p>
+      <a href="https://esmee02.github.io/haiku/">Facebook Marketplace</a>
+    </div>
+    
+    <!-- Square shape inside the container -->
+    <div class="box"></div>
+  </div>
+</body>
+</html>
